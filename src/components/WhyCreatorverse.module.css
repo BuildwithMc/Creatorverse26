@@ -1,221 +1,112 @@
 .section {
-    position: relative;
-    background: var(--text-white);
-    /* Light background */
-    padding-top: 6rem;
-    /* Increased from 2rem */
-    padding-bottom: 4rem;
-}
-
-.introSection {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-bottom: 4rem;
-    padding: 0 1rem;
-}
-
-.introText {
-    color: #555;
-    font-size: 0.95rem;
-    line-height: 1.6;
-}
-
-.introTitle {
-    font-family: var(--font-outfit);
-    font-weight: 800;
-    font-size: 1.25rem;
-    line-height: 1.2;
-    color: var(--bg-dark);
-}
-
-.headingWrapper {
-    text-align: center;
-    margin-bottom: 4rem;
-    position: relative;
+    padding: 2rem 0;
     display: flex;
     justify-content: center;
 }
 
-.heading {
-    font-size: 4rem;
-    /* Larger on mobile too */
-    font-weight: 800;
-    color: var(--bg-dark);
+.mainCard {
+    background: #f4f4f4;
+    border-radius: 40px;
+    width: 98%;
+    /* Spans the screen */
+    min-height: 85vh;
+    padding: 6rem 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: relative;
-    letter-spacing: -0.05em;
-    line-height: 1;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.topRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.introText {
+    width: 45%;
+    color: #333;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.introTitle {
+    width: 35%;
+    font-family: var(--font-outfit);
+    font-weight: 700;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    color: black;
+    text-align: right;
+}
+
+.headingWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: auto;
+    padding-top: 4rem;
+}
+
+.heading {
+    font-family: var(--font-outfit);
+    font-size: 12vw;
+    font-weight: 800;
+    color: #111;
+    line-height: 0.8;
+    letter-spacing: -0.06em;
+    z-index: 2;
+    position: relative;
+    white-space: nowrap;
 }
 
 /* Green Squiggle */
 .squiggle {
     position: absolute;
-    top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: auto;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.card {
-    background: #111;
-    border-radius: 24px;
-    padding: 4rem 2rem;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    max-width: 900px;
-    margin: 0 auto;
-    /* border: 1px solid rgba(255, 255, 255, 0.05); */
-}
-
-.cardText {
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.4;
-    color: white;
-    position: relative;
-    z-index: 5;
-    /* Above shapes */
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Decorations/Shapes */
-.decoration {
-    position: absolute;
-    z-index: 1;
-    /* Below text */
-    pointer-events: none;
-}
-
-/* Specific shape positions */
-.blueBlob {
-    bottom: 20%;
-    left: 5%;
-    color: #5856d6;
-    /* Purple/Blue */
-    width: 80px;
-    height: 80px;
-    transform: rotate(-15deg);
-}
-
-.greenStar {
-    bottom: 10%;
-    left: 30%;
-    color: #00ba70;
-    width: 70px;
-    height: 70px;
-    animation: spin 10s linear infinite;
-}
-
-.pinkCloud {
-    top: 15%;
-    right: 10%;
-    color: #e61d5f;
-    width: 90px;
-    height: 70px;
-    transform: rotate(10deg);
-}
-
-.pinkDiamond {
-    bottom: 15%;
+    top: -55%;
     right: 15%;
-    color: #ff3399;
-    width: 70px;
-    height: 70px;
-    transform: rotate(15deg);
+    width: 40vw;
+    /* Responsive width */
+    max-width: 600px;
+    pointer-events: none;
+    z-index: 1;
+    transform: rotate(-5deg);
 }
 
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
+/* Responsive */
+@media (max-width: 1024px) {
+    .mainCard {
+        padding: 4rem;
+        height: auto;
+        min-height: auto;
     }
 
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-@media (min-width: 768px) {
-    .introSection {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+    .topRow {
+        flex-direction: column;
+        gap: 3rem;
     }
 
-    .introText {
-        width: 45%;
-        font-size: 1.25rem;
-        /* Larger body text */
-    }
-
+    .introText,
     .introTitle {
-        width: 40%;
-        font-size: 3.5rem;
-        /* Much larger title */
-        text-align: right;
-        line-height: 1.1;
+        width: 100%;
+        text-align: left;
     }
 
     .heading {
-        font-size: 11vw;
-        /* Massive responsive text to fill width */
-        line-height: 0.85;
-        letter-spacing: -0.06em;
+        font-size: 15vw;
     }
 
     .squiggle {
-        width: 70%;
-        /* Slightly wider */
-        min-width: 500px;
-        max-width: 1000px;
-        top: -8vw;
-        left: 55%;
-        /* Shift right to align with "Creatorverse" */
-        transform: translateX(-50%);
-    }
-
-    .card {
-        max-width: 100%;
-        border-radius: 40px;
-        padding: 8rem 4rem;
-        /* Huge padding */
-        min-height: 60vh;
-        /* Ensure it takes up vertical space */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .cardText {
-        font-size: 3.5rem;
-        /* Huge text */
-        line-height: 1.25;
-        padding: 0 4rem;
-        max-width: 1400px;
-    }
-
-    /* Massive Shapes */
-    .blueBlob {
-        width: 300px;
-        height: 300px;
-    }
-
-    .greenStar {
-        width: 250px;
-        height: 250px;
-    }
-
-    .pinkCloud {
-        width: 280px;
-        height: 200px;
-    }
-
-    .pinkDiamond {
-        width: 220px;
-        height: 220px;
+        top: -40%;
+        right: 0;
+        width: 60vw;
     }
 }

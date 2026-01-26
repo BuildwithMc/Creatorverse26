@@ -1,119 +1,158 @@
 .footer {
-    background: var(--bg-dark);
+    background: #111;
     color: white;
     padding: 6rem 0 2rem;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
     position: relative;
-    z-index: 10;
-    margin-top: -40px;
+    margin-top: -80px;
+    /* Pull up behind newsletter if needed, or adjust based on layout */
+    padding-top: 100px;
+    /* Space for the border */
+    /* Angle matching design more closely */
+    clip-path: polygon(0 60px, 100% 0, 100% 100%, 0 100%);
+    border-top: 15px solid #00cc66;
 }
 
-.newsletterBox {
-    background: #151515;
-    border-radius: 32px;
-    padding: 3rem;
-    margin-bottom: 4rem;
-    position: relative;
-    overflow: hidden;
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 6rem;
 }
 
-.newsletterContent {
-    flex: 1;
-    z-index: 2;
-}
-
-.newsTitle {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 0.5rem;
-}
-
-.newsTitle span {
-    color: var(--brand-blue);
-}
-
-.inputGroup {
+.topSection {
     display: flex;
-    gap: 1rem;
-    margin-top: 1.5rem;
+    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.input {
-    flex: 1;
-    min-width: 200px;
-    padding: 1rem 1.5rem;
-    border-radius: 99px;
-    border: 1px solid #333;
-    background: #000;
-    color: white;
-    outline: none;
-}
-
-.input:focus {
-    border-color: var(--brand-pink);
-}
-
-.qrContainer {
-    background: white;
-    padding: 1rem;
-    border-radius: 16px;
-    width: 150px;
-    height: 150px;
+.linksGrid {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    z-index: 2;
+    gap: 8rem;
 }
 
-.qr {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.bottomBar {
+.linkColumn {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 1.5rem;
+}
+
+.linkColumn a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    font-family: var(--font-inter);
+}
+
+.linkColumn a:hover {
+    opacity: 1;
+}
+
+
+
+.buyTicketsBtn {
+    background: #ff3399;
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 99px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-inter);
+    transition: background 0.2s;
+    font-size: 1rem;
+}
+
+.buyTicketsBtn:hover {
+    background: #e62e8a;
+}
+
+.bottomSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
     gap: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 2rem;
 }
 
-.logo {
+.bigLogo {
     font-family: var(--font-outfit);
-    font-size: 1.5rem;
+    font-size: 5rem;
+    /* Smaller than Schedule but big */
     font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: white;
+    margin: 0;
 }
 
-.links {
+.footerInfo {
     display: flex;
-    gap: 2rem;
-    font-size: 0.875rem;
+    align-items: flex-end;
+    /* Align bottom */
+    gap: 4rem;
     color: #888;
+    font-size: 0.9rem;
 }
 
 .copyright {
-    color: #555;
-    font-size: 0.875rem;
+    margin-bottom: 5px;
+    /* Align with social icons */
 }
 
-@media (min-width: 768px) {
-    .newsletterBox {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+.followUs {
+    font-size: 0.8rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.icons {
+    display: flex;
+    gap: 1rem;
+    color: white;
+}
+
+.icons svg {
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.icons svg:hover {
+    color: #ff3399;
+}
+
+@media (max-width: 900px) {
+    .linksGrid {
+        gap: 3rem;
+        flex-wrap: wrap;
     }
 
-    .bottomBar {
-        flex-direction: row;
-        justify-content: space-between;
+    .bigLogo {
+        font-size: 3rem;
+    }
+
+    .footerInfo {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .bottomSection {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

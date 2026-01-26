@@ -16,6 +16,9 @@
     align-items: center;
     justify-content: space-between;
     height: 80px;
+    width: 98%;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .logo {
@@ -36,10 +39,8 @@
 .desktopMenu {
     display: none;
     align-items: center;
-    gap: 2rem;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    gap: 3rem;
+    /* Increased gap for filled look */
 }
 
 .navLink {

@@ -1,49 +1,50 @@
 "use client";
 
 import React from 'react';
-import { Button } from './ui/Button';
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import styles from './Footer.module.css';
 
 export default function Footer() {
     return (
         <footer className={styles.footer}>
-            <div className="container">
-
-                <div className={styles.newsletterBox}>
-                    <div className={styles.newsletterContent}>
-                        <h2 className={styles.newsTitle}>
-                            Sign Up, <span>Stay Updated</span>
-                        </h2>
-                        <p style={{ color: '#aaa' }}>
-                            be the first to know the latest news speakers and schedule updates
-                        </p>
-
-                        <form className={styles.inputGroup} onSubmit={(e) => e.preventDefault()}>
-                            <input type="email" placeholder="Enter your email" className={styles.input} required />
-                            <Button type="submit" variant="primary">Subscribe</Button>
-                        </form>
+            {/* Green accent line handled in CSS */}
+            <div className={styles.container}>
+                <div className={styles.topSection}>
+                    <div className={styles.linksGrid}>
+                        <div className={styles.linkColumn}>
+                            <a href="#schedule">Schedule</a>
+                            <a href="#speakers">Speakers</a>
+                            <a href="#tickets">Tickets</a>
+                        </div>
+                        <div className={styles.linkColumn}>
+                            <a href="#faqs">FAQs</a>
+                            <a href="#blogs">Blogs</a>
+                            <a href="#dp">DP Generator</a>
+                        </div>
                     </div>
 
-                    <div className={styles.qrContainer}>
-                        {/* Placeholder QR */}
-                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Creatorverse2026" alt="QR Code" className={styles.qr} />
+                    <div className={styles.ctaWrapper}>
+                        <button className={styles.buyTicketsBtn}>Buy Tickets</button>
                     </div>
                 </div>
 
-                <div className={styles.bottomBar}>
-                    <div className={styles.logo}>Creatorverse</div>
+                <div className={styles.bottomSection}>
+                    <h1 className={styles.bigLogo}>Creatorverse</h1>
 
-                    <div className={styles.links}>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Use</a>
-                        <a href="#">Contact Us</a>
-                    </div>
+                    <div className={styles.footerInfo}>
+                        <span className={styles.copyright}>© Copyright 2026</span>
 
-                    <div className={styles.copyright}>
-                        © 2026 Creatorverse. All rights reserved.
+                        <div className={styles.socials}>
+                            <span className={styles.followUs}>Follow Us</span>
+                            <div className={styles.icons}>
+                                <Facebook size={20} />
+                                <Instagram size={20} />
+                                <Linkedin size={20} />
+                                <Twitter size={20} />
+                            </div>
+                        </div>
                     </div>
                 </div>
-
             </div>
         </footer>
     );

@@ -9,25 +9,30 @@
 .heroCard {
     background: #111;
     border-radius: 40px;
-    width: 95%;
-    max-width: 1300px;
-    min-height: 80vh;
+    width: 98%;
+    /* Spans the screen */
+    max-width: none;
+    /* Remove width constraint */
+    min-height: 85vh;
+    /* Increased height */
     position: relative;
     overflow: hidden;
-    padding: 4rem 2rem;
+    padding: 6rem 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     color: white;
-    margin: 0 auto;
+    margin: 10px auto;
+    /* Centered with small top margin */
 }
 
 .content {
     position: relative;
     z-index: 10;
-    max-width: 800px;
-    margin-left: 5%;
-    /* Slight left alignment as per design */
+    max-width: 1000px;
+    /* Increased width */
+    width: 100%;
+    /* Ensure it takes available space */
 }
 
 .badge {

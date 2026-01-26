@@ -19,7 +19,7 @@ export default function Navbar() {
 
     return (
         <header className={styles.header}>
-            <div className={`container ${styles.navContainer}`}>
+            <div className={styles.navContainer}>
                 <Link href="/" className={styles.logo}>
                     Creatorverse
                 </Link>
