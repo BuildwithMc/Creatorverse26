@@ -1,0 +1,144 @@
+.section {
+    background: #f8f9fa;
+    /* Light background */
+    color: #111;
+    position: relative;
+}
+
+.heading {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #111;
+}
+
+.heading span {
+    color: var(--brand-pink);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 24px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+    margin-bottom: 1.5rem;
+}
+
+.cardTitle {
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Variants */
+.pink .cardTitle,
+.pink .price {
+    color: var(--brand-pink);
+}
+
+.pinkButton {
+    background: var(--brand-pink);
+    color: white;
+    width: 100%;
+    border-radius: 99px;
+    padding: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.blue .cardTitle,
+.blue .price {
+    color: var(--brand-purple);
+}
+
+.blueButton {
+    background: var(--brand-purple);
+    color: white;
+    width: 100%;
+    border-radius: 99px;
+    padding: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.green .cardTitle,
+.green .price {
+    color: var(--brand-green);
+}
+
+.greenButton {
+    background: var(--brand-green);
+    color: white;
+    width: 100%;
+    border-radius: 99px;
+    padding: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.red .cardTitle,
+.red .price {
+    color: #ff3333;
+}
+
+.redButton {
+    background: #ff3333;
+    color: white;
+    width: 100%;
+    border-radius: 99px;
+    padding: 0.75rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #eee;
+    font-size: 12px;
+    font-weight: bold;
+}
