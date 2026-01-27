@@ -1,10 +1,185 @@
 ﻿.section {
-    padding: 4rem 0;
+    padding: 2rem 0 6rem;
     display: flex;
     justify-content: center;
     background-color: #f4f4f4;
     position: relative;
     z-index: 10;
+}
+
+.container {
+    width: 98%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+.newsletterBox {
+    background-color: #0a0a0a;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: white;
+    min-height: 500px;
+    justify-content: center;
+    /* subtle noise */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: cover;
+}
+
+/* Blobs - sharper vectors */
+.blob1 {
+    position: absolute;
+    top: -5%;
+    left: 10%;
+    width: 300px;
+    height: 300px;
+    background: #ff3399;
+    border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+    z-index: 1;
+    transform: rotate(-10deg);
+}
+
+.blob2 {
+    position: absolute;
+    bottom: -10%;
+    right: 25%;
+    width: 500px;
+    height: 500px;
+    background: #e61d5f;
+    border-radius: 60% 40% 30% 70% / 50% 30% 70% 50%;
+    z-index: 1;
+    transform: rotate(20deg);
+    left: auto;
+    /* reset left */
+}
+
+.newsletterContent {
+    position: relative;
+    z-index: 5;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.newsTitle {
+    font-family: var(--font-outfit);
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: white;
+}
+
+.newsTitle span {
+    color: #5d5dff;
+}
+
+.newsSubtitle {
+    color: #ccc;
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    font-family: var(--font-inter);
+}
+
+.inputGroup {
+    background: white;
+    border-radius: 999px;
+    padding: 0.6rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+    color: #333;
+    outline: none;
+    font-family: var(--font-inter);
+}
+
+.subscribeButton {
+    background: #1a1a1a;
+    color: #ff3399;
+    border: none;
+    border-radius: 99px;
+    padding: 1.2rem 3rem;
+    font-weight: 700;
+    font-family: var(--font-outfit);
+    font-size: 1.1rem;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.2s;
+}
+
+.subscribeButton:hover {
+    transform: scale(1.02);
+}
+
+.qrSection {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.qrContainer {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 24px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.qr {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.scanText {
+    font-family: var(--font-outfit);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: white;
+}
+
+@media (min-width: 900px) {
+    .newsletterBox {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 6rem 8rem;
+        min-height: 600px;
+    }
+
+    .newsTitle {
+        font-size: 6rem;
+    }
+
+    .qrSection {
+        margin-top: 0;
+        margin-right: 4rem;
+    }
 }
 
 .container {
