@@ -19,7 +19,7 @@
 
 .headerContent {
     padding: 1rem;
-    max-width: 1400px;
+    max-width: 1440px;
     position: relative;
     margin-bottom: 2rem;
 }
@@ -30,7 +30,7 @@
 }
 
 .heading {
-    font-family: var(--font-outfit);
+    font-family: var(--font-plus-jakarta);
     font-size: 3rem;
     /* Mobile Size */
     font-weight: 800;
@@ -141,7 +141,7 @@
 }
 
 .comingSoonText {
-    font-family: var(--font-outfit);
+    font-family: var(--font-plus-jakarta);
     font-size: 3rem;
     font-weight: 800;
     color: white;
@@ -220,7 +220,7 @@
 
 .headerContent {
     padding: 2rem;
-    max-width: 1400px;
+    max-width: 1440px;
     position: relative;
     margin-bottom: 2rem;
 }
@@ -249,7 +249,7 @@
 }
 
 .heading {
-    font-family: var(--font-outfit);
+    font-family: var(--font-plus-jakarta);
     font-size: 5rem;
     font-weight: 800;
     color: #0d0d0d;
@@ -349,7 +349,7 @@
 }
 
 .comingSoonText {
-    font-family: var(--font-outfit);
+    font-family: var(--font-plus-jakarta);
     font-size: 3rem;
     font-weight: 800;
     color: white;

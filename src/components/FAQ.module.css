@@ -8,14 +8,14 @@
 
 .container {
     width: 90%;
-    max-width: 1600px;
+    max-width: 1440px;
     margin: 0 auto;
     position: relative;
     z-index: 5;
 }
 
 .heading {
-    font-family: var(--font-outfit);
+    font-family: var(--font-plus-jakarta);
     font-size: 3rem;
     line-height: 1;
     font-weight: 800;
@@ -53,7 +53,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: var(--font-inter);
+    font-family: var(--font-plus-jakarta);
     font-weight: 600;
     color: #111;
     font-size: 1.1rem;
@@ -172,7 +172,7 @@
 
 .container {
     width: 95%;
-    max-width: 1400px;
+    max-width: 1440px;
     /* Wider container */
     margin: 0 auto;
     position: relative;
@@ -180,7 +180,7 @@
 }
 
 .heading {
-    font-family: var(--font-outfit);
+    font-family: var(--font-plus-jakarta);
     font-size: 5rem;
     line-height: 0.95;
     font-weight: 800;
@@ -223,7 +223,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: var(--font-inter);
+    font-family: var(--font-plus-jakarta);
     font-weight: 500;
     color: #111;
     font-size: 1.25rem;
@@ -327,6 +327,6 @@
     }
 
     .container {
-        max-width: 1600px;
+        max-width: 1440px;
     }
 }

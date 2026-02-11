@@ -35,7 +35,7 @@ export default function Navbar() {
 
                 {/* Right Side Button */}
                 <div className={styles.authButtons}>
-                    <Button variant="primary" size="md" onClick={() => window.open('#tickets', '_self')}>
+                    <Button variant="primary" size="md" className={styles.buyButton} onClick={() => window.open('#tickets', '_self')}>
                         Buy Tickets
                     </Button>
                 </div>

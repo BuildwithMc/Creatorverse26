@@ -7,7 +7,7 @@
 
 .container {
     width: 95%;
-    max-width: 1600px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -17,7 +17,7 @@
 }
 
 .heading {
-    font-family: var(--font-outfit);
+    font-family: var(--font-plus-jakarta);
     font-size: 3rem;
     /* Mobile Size */
     font-weight: 800;
@@ -80,7 +80,7 @@
 }
 
 .title {
-    font-family: var(--font-outfit);
+    font-family: var(--font-plus-jakarta);
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
@@ -130,7 +130,7 @@
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
-    font-family: var(--font-inter);
+    font-family: var(--font-plus-jakarta);
     transition: background 0.2s;
 }
 
@@ -181,7 +181,7 @@
 
 .container {
     width: 95%;
-    max-width: 1600px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 2rem;
 }
@@ -191,7 +191,7 @@
 }
 
 .heading {
-    font-family: var(--font-outfit);
+    font-family: var(--font-plus-jakarta);
     font-size: 6rem;
     /* Huge heading */
     font-weight: 800;
@@ -270,7 +270,7 @@
 }
 
 .title {
-    font-family: var(--font-outfit);
+    font-family: var(--font-plus-jakarta);
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 3rem;
@@ -323,7 +323,7 @@
     align-items: center;
     gap: 0.5rem;
     cursor: pointer;
-    font-family: var(--font-inter);
+    font-family: var(--font-plus-jakarta);
     transition: background 0.2s;
 }
 

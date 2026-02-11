@@ -14,7 +14,7 @@
 
 .container {
     width: 95%;
-    max-width: 1400px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 2rem;
     display: flex;
@@ -47,7 +47,7 @@
     font-size: 1rem;
     opacity: 0.8;
     transition: opacity 0.2s;
-    font-family: var(--font-inter);
+    font-family: var(--font-plus-jakarta);
 }
 
 .linkColumn a:hover {
@@ -64,7 +64,7 @@
     font-weight: 700;
     border: none;
     cursor: pointer;
-    font-family: var(--font-inter);
+    font-family: var(--font-plus-jakarta);
     transition: background 0.2s;
     font-size: 1rem;
 }
@@ -83,7 +83,7 @@
 }
 
 .bigLogo {
-    font-family: var(--font-outfit);
+    font-family: var(--font-plus-jakarta);
     font-size: 5rem;
     /* Smaller than Schedule but big */
     font-weight: 700;

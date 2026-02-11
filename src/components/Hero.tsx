@@ -17,7 +17,7 @@ export default function Hero() {
                         transition={{ duration: 0.6 }}
                     >
                         <div className={styles.badge}>
-                            <Calendar size={16} />
+                            <Calendar size={18} />
                             <span>May 2nd, 2026 . Enugu, Nigeria</span>
                         </div>
                     </motion.div>
@@ -46,7 +46,7 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                     >
-                        <Button variant="primary" size="lg" onClick={() => window.open('#tickets', '_self')}>
+                        <Button variant="primary" size="lg" className={styles.buyButton} onClick={() => window.open('#tickets', '_self')}>
                             Buy Tickets
                         </Button>
 
@@ -56,56 +56,47 @@ export default function Hero() {
                     </motion.div>
                 </div>
 
-                {/* Decorative Shapes (Stickies) */}
-                <div className={styles.shapeContainer}>
-                    {/* Green Sticky (Back) */}
+                {/* Collage Images */}
+                <div className={styles.collageContainer}>
+                    {/* Pink Image */}
                     <motion.div
-                        className={styles.sticky}
-                        style={{
-                            background: '#00cc66',
-                            width: '300px',
-                            height: '300px',
-                            top: '10%',
-                            right: '15%',
-                            rotate: -5
-                        }}
-                        animate={{ y: [0, -10, 0] }}
-                        transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
-                    />
+                        className={`${styles.collageImage} ${styles.pinkImage}`}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.4 }}
+                    >
+                        <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=400&q=80" alt="Creator" />
+                    </motion.div>
 
-                    {/* Pink Sticky (Middle) */}
+                    {/* Blue Image */}
                     <motion.div
-                        className={styles.sticky}
-                        style={{
-                            background: 'var(--brand-pink)',
-                            width: '320px',
-                            height: '320px',
-                            top: '30%',
-                            right: '5%',
-                            rotate: 10,
-                            zIndex: 2
-                        }}
-                        animate={{ y: [0, 15, 0] }}
-                        transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                    />
+                        className={`${styles.collageImage} ${styles.blueImage}`}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.5 }}
+                    >
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=400&q=80" alt="Creator" />
+                    </motion.div>
 
-                    {/* Purple Sticky (Front/Bottom) */}
+                    {/* Green Image */}
                     <motion.div
-                        className={styles.sticky}
-                        style={{
-                            background: 'var(--brand-purple)',
-                            width: '280px',
-                            height: '200px', /* Rectangle */
-                            bottom: '-5%',
-                            right: '25%',
-                            rotate: -5,
-                            zIndex: 3,
-                            filter: 'blur(10px)', /* Slight blur effect in foreground possibly */
-                            opacity: 0.9
-                        }}
-                        animate={{ y: [0, -15, 0] }}
-                        transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
-                    />
+                        className={`${styles.collageImage} ${styles.greenImage}`}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.6 }}
+                    >
+                        <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&w=400&q=80" alt="Creator" />
+                    </motion.div>
+
+                    {/* Red Image */}
+                    <motion.div
+                        className={`${styles.collageImage} ${styles.redImage}`}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.6, delay: 0.7 }}
+                    >
+                        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=400&q=80" alt="Creator" />
+                    </motion.div>
                 </div>
             </div>
         </section>

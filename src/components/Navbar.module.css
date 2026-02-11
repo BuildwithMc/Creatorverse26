@@ -22,13 +22,16 @@
 }
 
 .logo {
-    font-family: var(--font-outfit);
-    font-size: 1.5rem;
+    font-family: var(--font-plus-jakarta);
+    font-size: 20px;
     font-weight: 700;
     color: black;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    line-height: 100%;
+    letter-spacing: -0.36px;
+    opacity: 1;
 }
 
 .logo span {
@@ -39,19 +42,35 @@
 .desktopMenu {
     display: none;
     align-items: center;
-    gap: 3rem;
-    /* Increased gap for filled look */
+    gap: 30px;
 }
 
 .navLink {
     color: #333;
-    font-size: 0.95rem;
-    font-weight: 500;
+    font-family: var(--font-plus-jakarta);
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.29px;
     transition: color 0.2s;
 }
 
 .navLink:hover {
     color: var(--brand-pink);
+}
+
+.buyButton {
+    width: 175px;
+    height: 60px;
+    border-radius: 70px;
+    padding: 0 24px !important;
+    gap: 10px;
+    background: #FE49C1 !important;
+    box-shadow: 0px 2px 6px 0px #00000040 !important;
+    font-family: var(--font-plus-jakarta);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .authButtons {
