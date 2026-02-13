@@ -34,6 +34,15 @@ export default function Blog() {
     return (
         <section className="blog-section" id="blog">
             <div className="blog-container">
+                {/* Decorative Images */}
+                <Image
+                    src="/images/green-squiggle.png"
+                    alt=""
+                    width={150}
+                    height={80}
+                    className="blog-decoration-squiggle"
+                />
+
                 <div className="blog-header">
                     <h2 className="blog-heading">Blogs</h2>
                     <p className="blog-sub-heading">Stories, tips, and real lessons from the creator world.</p>

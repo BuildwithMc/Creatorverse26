@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 import '../app/sections.css';
 
 const faqs = [
@@ -21,9 +22,21 @@ export default function FAQ() {
     return (
         <section className="faq-section" id="faqs">
             <div className="faq-container">
-                {/* Decorative Blobs */}
-                <div className="faq-blob1"></div>
-                <div className="faq-blob2"></div>
+                {/* Decorative Images */}
+                <Image
+                    src="/images/greenstar.png"
+                    alt=""
+                    width={80}
+                    height={80}
+                    className="faq-decoration-star"
+                />
+                <Image
+                    src="/images/pink-squiggle.png"
+                    alt=""
+                    width={120}
+                    height={60}
+                    className="faq-decoration-squiggle"
+                />
 
                 <h2 className="faq-heading">Frequently Asked Questions</h2>
                 <div className="faq-list">

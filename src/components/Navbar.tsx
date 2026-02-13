@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 import { Button } from './ui/Button';
-import styles from './Navbar.module.css';
+import '../app/sections.css';
 
 const navLinks = [
     { name: 'Why Creatorverse', href: '#why' },
@@ -18,31 +18,31 @@ export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className={styles.header}>
-            <div className={styles.navContainer}>
-                <Link href="/" className={styles.logo}>
+        <header className="navbar-header">
+            <div className="navbar-container">
+                <Link href="/" className="navbar-logo">
                     Creatorverse
                 </Link>
 
                 {/* Desktop Menu - Centered */}
-                <nav className={styles.desktopMenu}>
-                    <Link href="#schedule" className={styles.navLink}>Schedule</Link>
-                    <Link href="#speakers" className={styles.navLink}>Speakers</Link>
-                    <Link href="#tickets" className={styles.navLink}>Tickets</Link>
-                    <Link href="#blog" className={styles.navLink}>Blog</Link>
-                    <Link href="#faq" className={styles.navLink}>FAQ&apos;s</Link>
+                <nav className="navbar-desktop-menu">
+                    <Link href="#schedule" className="navbar-link">Schedule</Link>
+                    <Link href="#speakers" className="navbar-link">Speakers</Link>
+                    <Link href="#tickets" className="navbar-link">Tickets</Link>
+                    <Link href="#blog" className="navbar-link">Blog</Link>
+                    <Link href="#faq" className="navbar-link">FAQ&apos;s</Link>
                 </nav>
 
                 {/* Right Side Button */}
-                <div className={styles.authButtons}>
-                    <Button variant="primary" size="md" className={styles.buyButton} onClick={() => window.open('#tickets', '_self')}>
+                <div className="navbar-auth-buttons">
+                    <Button variant="primary" size="md" className="navbar-buy-button" onClick={() => window.open('#tickets', '_self')}>
                         Buy Tickets
                     </Button>
                 </div>
 
                 {/* Mobile Toggle */}
                 <button
-                    className={styles.mobileToggle}
+                    className="navbar-mobile-toggle"
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle menu"
                 >
@@ -50,12 +50,12 @@ export default function Navbar() {
                 </button>
 
                 {/* Mobile Menu */}
-                <div className={`${styles.mobileMenu} ${isOpen ? styles.open : ''}`}>
-                    <Link href="#schedule" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Schedule</Link>
-                    <Link href="#speakers" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Speakers</Link>
-                    <Link href="#tickets" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Tickets</Link>
-                    <Link href="#blog" className={styles.mobileLink} onClick={() => setIsOpen(false)}>Blog</Link>
-                    <Link href="#faq" className={styles.mobileLink} onClick={() => setIsOpen(false)}>FAQ&apos;s</Link>
+                <div className={`navbar-mobile-menu ${isOpen ? 'navbar-mobile-menu-open' : ''}`}>
+                    <Link href="#schedule" className="navbar-mobile-link" onClick={() => setIsOpen(false)}>Schedule</Link>
+                    <Link href="#speakers" className="navbar-mobile-link" onClick={() => setIsOpen(false)}>Speakers</Link>
+                    <Link href="#tickets" className="navbar-mobile-link" onClick={() => setIsOpen(false)}>Tickets</Link>
+                    <Link href="#blog" className="navbar-mobile-link" onClick={() => setIsOpen(false)}>Blog</Link>
+                    <Link href="#faq" className="navbar-mobile-link" onClick={() => setIsOpen(false)}>FAQ&apos;s</Link>
 
                     <Button variant="primary" size="lg" className="w-full" onClick={() => {
                         setIsOpen(false);
