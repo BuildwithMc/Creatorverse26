@@ -1070,136 +1070,159 @@
    NEWSLETTER SECTION
    ======================================== */
 .newsletter-section {
-    background: #1A1A1A;
-    padding: 2rem 0;
+    background: #F2F2F0;
+    padding: 2rem 1rem;
 }
 
 .newsletter-container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
 
 .newsletter-box {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 20px;
-    padding: 2rem 1.5rem;
+    background: #1a1a1a;
+    border-radius: 32px;
+    padding: 2.5rem 1.5rem;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
 }
 
-.newsletter-blob1,
-.newsletter-blob2 {
+.newsletter-blob-image {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    opacity: 0.1;
+    z-index: 1;
     pointer-events: none;
+    opacity: 1;
 }
 
-.newsletter-blob1 {
-    background: #FE49C1;
-    top: -50px;
+.blob-top-left {
+    top: -30px;
     left: -50px;
+    width: 180px;
+    height: auto;
 }
 
-.newsletter-blob2 {
-    background: #5252ff;
-    bottom: -50px;
-    right: -50px;
+.blob-bottom-right {
+    bottom: -40px;
+    left: 550px;
+    width: 220px;
+    height: auto;
 }
 
 .newsletter-content {
     position: relative;
-    z-index: 2;
-    margin-bottom: 2rem;
+    z-index: 10;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
+    margin-top: 3rem;
 }
 
 .newsletter-title {
     font-family: var(--font-plus-jakarta);
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #F2F2F0;
-    margin-bottom: 0.5rem;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+    line-height: 1.2;
 }
 
 .newsletter-title span {
-    color: #FE49C1;
+    color: #6366f1;
 }
 
 .newsletter-subtitle {
     font-family: var(--font-plus-jakarta);
-    font-size: 14px;
-    color: rgba(242, 242, 240, 0.7);
-    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 0.5rem 0;
 }
 
 .newsletter-input-group {
+    background: white;
+    border-radius: 100px;
+    padding: 4px;
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: 52px;
+    margin-top: 0.5rem;
 }
 
 .newsletter-input {
     flex: 1;
-    padding: 0.85rem 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.1);
-    color: #F2F2F0;
-    border-radius: 10px;
+    background: transparent;
+    border: none;
+    padding: 0 1rem;
     font-family: var(--font-plus-jakarta);
-    font-size: 14px;
+    font-size: 0.85rem;
+    color: #1a1a1a;
+    height: 100%;
+    outline: none;
+    min-width: 0;
 }
 
 .newsletter-input::placeholder {
-    color: rgba(242, 242, 240, 0.5);
+    color: #999;
 }
 
 .newsletter-subscribe-button {
-    background: #FE49C1;
-    color: white;
-    padding: 0.85rem 1.5rem;
-    border-radius: 10px;
+    background: #1a1a1a;
+    color: #FE49C1;
+    padding: 0 0.85rem;
+    height: 40px;
+    border-radius: 100px;
     border: none;
     font-family: var(--font-plus-jakarta);
-    font-size: 14px;
+    font-size: 0.7rem;
     font-weight: 600;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: all 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-right: 3px;
 }
 
 .newsletter-subscribe-button:hover {
-    transform: translateY(-2px);
+    background: #000;
 }
 
 .newsletter-qr-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
     position: relative;
-    z-index: 2;
+    z-index: 10;
 }
 
 .newsletter-qr-container {
     background: white;
-    padding: 0.75rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 0.65rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 .newsletter-qr {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 }
 
 .newsletter-scan-text {
     font-family: var(--font-plus-jakarta);
-    font-size: 12px;
-    color: rgba(242, 242, 240, 0.7);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ffffff;
 }
 
 /* ========================================
@@ -1278,11 +1301,15 @@
 }
 
 .footer-big-logo {
-    font-family: var(--font-plus-jakarta);
-    font-size: 2rem;
+    font-family: var(--font-plus-jakarta), sans-serif;
     font-weight: 800;
+    font-size: 15vw;
+    /* Responsive for mobile */
+    line-height: 1;
+    letter-spacing: -0.05em;
     color: white;
-    margin: 0;
+    word-break: break-word;
+    /* Prevent overflow */
 }
 
 .footer-info {
@@ -1555,6 +1582,11 @@
         align-items: center;
         gap: 1.5rem;
     }
+
+    .footer-big-logo {
+        font-size: 100px;
+        letter-spacing: -4px;
+    }
 }
 
 /* ========================================
@@ -1820,52 +1852,140 @@
         max-width: none;
     }
 
-    /* Newsletter Section - Desktop */
+    /* Newsletter Section - Desktop & Tablet override */
+    .newsletter-section {
+        padding: 3rem 1rem;
+    }
+
     .newsletter-box {
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 3rem 4rem;
+        padding: 3.5rem 4rem;
+        text-align: left;
+        gap: 4rem;
     }
 
     .newsletter-content {
-        flex: 1;
+        align-items: flex-start;
+        max-width: 550px;
         margin-bottom: 0;
+        flex: 1;
     }
 
     .newsletter-title {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1.1;
     }
 
     .newsletter-subtitle {
-        font-size: 16px;
+        font-size: 1.125rem;
+        margin-bottom: 1.5rem;
     }
 
     .newsletter-input-group {
         max-width: 500px;
+        height: 64px;
+        padding: 6px;
+    }
+
+    .newsletter-input {
+        font-size: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .newsletter-subscribe-button {
+        height: 52px;
+        padding: 0 2rem;
+        font-size: 0.95rem;
+    }
+
+    .blob-top-left {
+        width: 260px;
+        top: -50px;
+        left: -30px;
+    }
+
+    .blob-bottom-right {
+        width: 380px;
+        bottom: -60px;
+        right: -50px;
+    }
+
+    .newsletter-qr-section {
+        flex-shrink: 0;
+    }
+
+    .newsletter-qr-container {
+        width: 200px;
+        height: 200px;
+        padding: 0.85rem;
     }
 
     .newsletter-qr {
-        width: 150px;
-        height: 150px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .newsletter-scan-text {
+        font-size: 1rem;
     }
 
     /* Footer Section - Desktop */
     .footer {
-        padding: 3rem 2rem;
+        padding: 4rem 2rem;
+        /* Optional: Add diagonal top if requested specifically, but for now matching layout */
+    }
+
+    .footer-top-section {
+        border-bottom: none;
+        margin-bottom: 4rem;
+        padding-bottom: 0;
+    }
+
+    .footer-bottom-section {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 2rem;
     }
 
     .footer-big-logo {
-        font-size: 3rem;
+        /* Remove override, rely on base class or enforce here */
+        font-size: 140px;
+        /* Adjusted to fit securely with other elements */
+        line-height: 0.8;
+        letter-spacing: -0.05em;
+        margin-bottom: -10px;
+        /* Align visual baseline */
+        flex-shrink: 0;
+    }
+
+    .footer-info {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding-bottom: 10px;
+        margin-left: 3rem;
     }
 
     .footer-link-column a {
         font-size: 16px;
     }
 
-    .footer-copyright,
+    .footer-copyright {
+        font-size: 16px;
+        margin-bottom: 5px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
     .footer-follow-us {
-        font-size: 14px;
+        font-size: 16px;
+        margin-bottom: 1rem;
+        display: block;
     }
 
     .footer-buy-tickets-btn {

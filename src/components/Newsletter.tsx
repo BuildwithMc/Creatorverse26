@@ -8,8 +8,17 @@ export default function Newsletter() {
         <section className="newsletter-section">
             <div className="newsletter-container">
                 <div className="newsletter-box">
-                    <div className="newsletter-blob1"></div>
-                    <div className="newsletter-blob2"></div>
+                    {/* Decorative blobs as requested */}
+                    <img
+                        src="/images/newspurple.png"
+                        alt=""
+                        className="newsletter-blob-image blob-top-left"
+                    />
+                    <img
+                        src="/images/newspink.png"
+                        alt=""
+                        className="newsletter-blob-image blob-bottom-right"
+                    />
 
                     <div className="newsletter-content">
                         <h2 className="newsletter-title">
@@ -27,7 +36,6 @@ export default function Newsletter() {
 
                     <div className="newsletter-qr-section">
                         <div className="newsletter-qr-container">
-                            {/* Placeholder QR to match style */}
                             <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=Creatorverse2026&color=000000" alt="QR Code" className="newsletter-qr" />
                         </div>
                         <span className="newsletter-scan-text">Scan QR code</span>
