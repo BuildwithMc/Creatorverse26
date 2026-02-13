@@ -1,6 +1,6 @@
 /* Mobile First Layout */
 .section {
-    background: #0d0d0d;
+    background: #ffffff;
     padding: 3rem 0 6rem;
     display: flex;
     justify-content: center;
@@ -32,7 +32,7 @@
     font-size: 3rem;
     font-weight: 800;
     line-height: 1;
-    color: white;
+    color: black;
     letter-spacing: -0.04em;
     position: relative;
     z-index: 10;
@@ -244,7 +244,7 @@
     font-size: 4rem;
     font-weight: 800;
     line-height: 0.95;
-    color: white;
+    color: black;
     letter-spacing: -0.04em;
     position: relative;
     z-index: 10;

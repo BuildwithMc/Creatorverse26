@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import styles from './FAQ.module.css';
+import '../app/sections.css';
 
 const faqs = [
     { question: "What is the Creatorverse?", answer: "Creatorverse is the ultimate gathering of creators, brands, and innovators to shape the future of the digital economy." },
@@ -19,25 +19,25 @@ export default function FAQ() {
     };
 
     return (
-        <section className={`section-padding ${styles.section}`} id="faqs">
-            <div className={styles.container}>
+        <section className="faq-section" id="faqs">
+            <div className="faq-container">
                 {/* Decorative Blobs */}
-                <div className={styles.blob1}></div>
-                <div className={styles.blob2}></div>
+                <div className="faq-blob1"></div>
+                <div className="faq-blob2"></div>
 
-                <h2 className={styles.heading}>Frequently Asked Questions</h2>
-                <div className={styles.faqList}>
+                <h2 className="faq-heading">Frequently Asked Questions</h2>
+                <div className="faq-list">
                     {faqs.map((f, i) => (
-                        <div key={i} className={`${styles.item} ${openIndex === i ? styles.openItem : ''}`}>
+                        <div key={i} className={`faq-item ${openIndex === i ? 'faq-open-item' : ''}`}>
                             <button
-                                className={`${styles.trigger} ${openIndex === i ? styles.openTrigger : ''}`}
+                                className={`faq-trigger ${openIndex === i ? 'faq-open-trigger' : ''}`}
                                 onClick={() => toggle(i)}
                             >
                                 {f.question}
-                                <ChevronDown className={`${styles.icon} ${openIndex === i ? styles.openIcon : ''}`} />
+                                <ChevronDown className={`faq-icon ${openIndex === i ? 'faq-open-icon' : ''}`} />
                             </button>
-                            <div className={`${styles.content} ${openIndex === i ? styles.openContent : ''}`}>
-                                <div className={styles.body}>{f.answer}</div>
+                            <div className={`faq-content ${openIndex === i ? 'faq-open-content' : ''}`}>
+                                <div className="faq-body">{f.answer}</div>
                             </div>
                         </div>
                     ))}

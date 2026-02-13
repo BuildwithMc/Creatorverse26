@@ -1,112 +1,158 @@
 .section {
-    padding: 2rem 0;
+    background: #F5F5F5;
+    padding: 6rem 0 8rem;
     display: flex;
     justify-content: center;
-}
-
-.mainCard {
-    background: #f4f4f4;
-    border-radius: 40px;
-    width: 98%;
-    /* Spans the screen */
-    min-height: 85vh;
-    padding: 6rem 8rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     position: relative;
-    overflow: hidden;
-    margin: 0 auto;
 }
 
+.container {
+    width: 100%;
+    max-width: 1440px;
+    position: relative;
+    padding: 0 40px;
+}
+
+/* Top Row: Description (left) and Heading (right) */
 .topRow {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    
 }
 
-.introText {
-    width: 45%;
-    color: #333;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.descriptionText {
+    flex: 1;
+    max-width: 550px;
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: #1A1A1A;
+    
 }
 
-.introTitle {
-    width: 35%;
-    font-family: var(--font-plus-jakarta);
+.descriptionText p {
+    margin: 0 0 1.5rem 0;
+}
+
+.descriptionText p:last-child {
+    margin-bottom: 0;
+}
+
+.topHeading {
+    flex: 0 0 auto;
+    max-width: 400px;
+    font-family: var(--font-plus-jakarta), sans-serif;
     font-weight: 700;
-    font-size: 2.2rem;
-    line-height: 1.2;
-    color: black;
-    text-align: right;
+    font-size: 32px;
+    line-height: 110%;
+    color: #1A1A1A;
+    text-align: center;
+
+
 }
 
-.headingWrapper {
+/* Green Squiggle - Centered */
+.squiggleWrapper {
     position: relative;
     width: 100%;
+    height: 300px;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-    margin-top: auto;
-    padding-top: 4rem;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
-.heading {
-    font-family: var(--font-plus-jakarta);
-    font-size: 12vw;
-    font-weight: 800;
-    color: #111;
-    line-height: 0.8;
-    letter-spacing: -0.06em;
-    z-index: 2;
-    position: relative;
-    white-space: nowrap;
-}
-
-/* Green Squiggle */
 .squiggle {
-    position: absolute;
-    top: -55%;
-    right: 15%;
-    width: 40vw;
-    /* Responsive width */
-    max-width: 600px;
-    pointer-events: none;
+    position: relative;
+    width: auto;
+    height: auto;
+    max-width: 900px;
     z-index: 1;
-    transform: rotate(-5deg);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-    .mainCard {
-        padding: 4rem;
-        height: auto;
-        min-height: auto;
+/* Main Heading - Bottom */
+.mainHeading {
+    font-family: var(--font-plus-jakarta), sans-serif;
+    font-weight: 700;
+    font-size: 164px;
+    line-height: 0.88;
+    letter-spacing: -0.08em;
+    color: #1A1A1A;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Tablet */
+@media (max-width: 1200px) {
+    .container {
+        padding: 0 3rem;
+    }
+
+    .topRow {
+        gap: 3rem;
+    }
+
+    .descriptionText {
+        font-size: 16px;
+    }
+
+    .topHeading {
+        font-size: 28px;
+        max-width: 350px;
+    }
+
+    .squiggleWrapper {
+        height: 250px;
+    }
+
+    .mainHeading {
+        font-size: 120px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 0 6rem;
+    }
+
+    .container {
+        padding: 0 1.5rem;
     }
 
     .topRow {
         flex-direction: column;
-        gap: 3rem;
+        gap: 2rem;
+        margin-bottom: 3rem;
     }
 
-    .introText,
-    .introTitle {
-        width: 100%;
+    .descriptionText {
+        max-width: 100%;
+        font-size: 14px;
+    }
+
+    .topHeading {
+        max-width: 100%;
+        font-size: 24px;
         text-align: left;
     }
 
-    .heading {
-        font-size: 15vw;
+    .squiggleWrapper {
+        height: 150px;
     }
 
     .squiggle {
-        top: -40%;
-        right: 0;
-        width: 60vw;
+        max-width: 500px;
+    }
+
+    .mainHeading {
+        font-size: 48px;
+        letter-spacing: -0.05em;
     }
 }

@@ -1,6 +1,6 @@
 .footer {
-    background: #111;
-    color: white;
+    background: #ffffff;
+    color: #111;
     padding: 6rem 0 2rem;
     position: relative;
     margin-top: -80px;
@@ -42,7 +42,7 @@
 }
 
 .linkColumn a {
-    color: #fff;
+    color: #111;
     text-decoration: none;
     font-size: 1rem;
     opacity: 0.8;
@@ -89,7 +89,7 @@
     font-weight: 700;
     line-height: 1;
     letter-spacing: -0.04em;
-    color: white;
+    color: #111;
     margin: 0;
 }
 
@@ -116,14 +116,14 @@
 
 .followUs {
     font-size: 0.8rem;
-    color: #fff;
+    color: #111;
     font-weight: 600;
 }
 
 .icons {
     display: flex;
     gap: 1rem;
-    color: white;
+    color: #111;
 }
 
 .icons svg {

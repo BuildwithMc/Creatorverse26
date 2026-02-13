@@ -2,10 +2,12 @@
 .header {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1440px;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.9);
+    background: #F2F2F0;
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
