@@ -16,7 +16,7 @@ export default function Speakers() {
                             Four bold creators — industry pros and rising voices — bringing real stories, real lessons, and the spark your next big move needs.
                         </p>
                     </div>
-                    <div className={styles.imageWrapper}>
+                    {/* <div className={styles.imageWrapper}>
                         <Image
                             src="/images/pink-squiggle.png"
                             alt="Decorative Pink Squiggle"
@@ -25,7 +25,7 @@ export default function Speakers() {
                             className={styles.pinkSquiggle}
                             priority
                         />
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className={styles.speakersContainer}>

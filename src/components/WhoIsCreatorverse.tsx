@@ -12,7 +12,7 @@ export default function WhoIsCreatorverse() {
                 {/* Replace these image paths when you add your custom shape images */}
                 <div className="who-shape who-shape-1">
                     <Image
-                        src="/images/pink-squiggle.png"
+                        src="/images/PURPLESTAR.png"
                         alt=""
                         width={120}
                         height={120}
@@ -21,7 +21,7 @@ export default function WhoIsCreatorverse() {
                 </div>
                 <div className="who-shape who-shape-2">
                     <Image
-                        src="/images/green-squiggle.png"
+                        src="/images/redstar.png"
                         alt=""
                         width={100}
                         height={100}
@@ -30,7 +30,7 @@ export default function WhoIsCreatorverse() {
                 </div>
                 <div className="who-shape who-shape-3">
                     <Image
-                        src="/images/pink-squiggle.png"
+                        src="/images/greenstar.png"
                         alt=""
                         width={110}
                         height={110}
@@ -39,7 +39,7 @@ export default function WhoIsCreatorverse() {
                 </div>
                 <div className="who-shape who-shape-4">
                     <Image
-                        src="/images/green-squiggle.png"
+                        src="/images/pinkstar.png"
                         alt=""
                         width={130}
                         height={130}

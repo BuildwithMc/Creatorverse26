@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import '../app/sections.css';
 
 export default function Footer() {
@@ -37,10 +37,14 @@ export default function Footer() {
                         <div className="footer-socials">
                             <span className="footer-follow-us">Follow Us</span>
                             <div className="footer-icons">
-                                <Facebook size={20} />
-                                <Instagram size={20} />
-                                <Linkedin size={20} />
-                                <Twitter size={20} />
+                                <a
+                                    href="https://www.instagram.com/creatorverse_events"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Follow us on Instagram"
+                                >
+                                    <Instagram size={24} />
+                                </a>
                             </div>
                         </div>
                     </div>

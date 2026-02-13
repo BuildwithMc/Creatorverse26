@@ -1,5 +1,5 @@
 .section {
-    padding: 4rem 0;
+    padding: 1rem 0;
     display: flex;
     justify-content: center;
     background: #ffffff;
@@ -14,8 +14,8 @@
     align-items: flex-start;
     position: relative;
     background: transparent;
-    padding: 0 64px;
-    margin: 116px auto 0;
+    padding: 0 24px;
+    margin: 11px auto 0;
 }
 
 .heading {
