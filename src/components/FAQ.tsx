@@ -7,7 +7,7 @@ import '../app/sections.css';
 
 const faqs = [
     { question: "What is the Creatorverse?", answer: "Creatorverse is the ultimate gathering of creators, brands, and innovators to shape the future of the digital economy." },
-    { question: "What is the schedule for Creatorverse?", answer: "The event spans two days, April 18 & 25, featuring keynotes, panels, extensive break-out sessions, and networking mixers." },
+    { question: "What is the schedule for Creatorverse?", answer: "The event lasts for a day, May 02, featuring keynotes, panels, extensive break-out sessions, and networking mixers." },
     { question: "How do I purchase tickets for Creatorverse?", answer: "You can get your ticket directly from this website in the Tickets section above. Early bird pricing is available for a limited time!" },
     { question: "How many speakers are coming for Creatorverse?", answer: "We have over 20 industry leaders confirmed, with more surprise guests to be announced closer to the date." },
 ];
