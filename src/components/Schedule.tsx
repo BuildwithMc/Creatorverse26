@@ -45,6 +45,13 @@ export default function Schedule() {
                     </div>
                 </div>
 
+                {/* See Full Program Button */}
+                <div className="schedule-button-wrapper">
+                    <button className="schedule-full-program-button" onClick={() => window.location.href = '/schedule'}>
+                        See Our Full Program
+                    </button>
+                </div>
+
             </div>
         </section>
     );

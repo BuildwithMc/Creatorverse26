@@ -1,3 +1,5 @@
+"use client";
+
 import Image from 'next/image';
 import { ChevronRight } from 'lucide-react';
 import '../app/sections.css';
@@ -72,7 +74,7 @@ export default function Blog() {
                 </div>
 
                 <div className="blog-button-wrapper">
-                    <button className="blog-see-all-button">
+                    <button className="blog-see-all-button" onClick={() => window.location.href = '/blog'}>
                         See all Articles <ChevronRight size={16} />
                     </button>
                 </div>

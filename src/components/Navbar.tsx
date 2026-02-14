@@ -7,11 +7,11 @@ import { Button } from './ui/Button';
 import '../app/sections.css';
 
 const navLinks = [
-    { name: 'Why Creatorverse', href: '#why' },
-    { name: 'Speakers', href: '#speakers' },
-    { name: 'Schedule', href: '#schedule' },
-    { name: 'Blog', href: '#blog' },
-    { name: 'FAQ', href: '#faq' },
+    { name: 'Schedule', href: '/schedule' },
+    { name: 'Speakers', href: '/speakers' },
+    { name: 'Tickets', href: '/#tickets' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'FAQ', href: '/faq' },
 ];
 
 export default function Navbar() {
@@ -26,16 +26,16 @@ export default function Navbar() {
 
                 {/* Desktop Menu - Centered */}
                 <nav className="navbar-desktop-menu">
-                    <Link href="#schedule" className="navbar-link">Schedule</Link>
-                    <Link href="#speakers" className="navbar-link">Speakers</Link>
-                    <Link href="#tickets" className="navbar-link">Tickets</Link>
-                    <Link href="#blog" className="navbar-link">Blog</Link>
-                    <Link href="#faq" className="navbar-link">FAQ&apos;s</Link>
+                    {navLinks.map((link) => (
+                        <Link key={link.name} href={link.href} className="navbar-link">
+                            {link.name}
+                        </Link>
+                    ))}
                 </nav>
 
                 {/* Right Side Button */}
                 <div className="navbar-auth-buttons">
-                    <Button variant="primary" size="md" className="navbar-buy-button" onClick={() => window.open('#tickets', '_self')}>
+                    <Button variant="primary" size="md" className="navbar-buy-button" onClick={() => window.location.href = '/#tickets'}>
                         Buy Tickets
                     </Button>
                 </div>
@@ -51,15 +51,20 @@ export default function Navbar() {
 
                 {/* Mobile Menu */}
                 <div className={`navbar-mobile-menu ${isOpen ? 'navbar-mobile-menu-open' : ''}`}>
-                    <Link href="#schedule" className="navbar-mobile-link" onClick={() => setIsOpen(false)}>Schedule</Link>
-                    <Link href="#speakers" className="navbar-mobile-link" onClick={() => setIsOpen(false)}>Speakers</Link>
-                    <Link href="#tickets" className="navbar-mobile-link" onClick={() => setIsOpen(false)}>Tickets</Link>
-                    <Link href="#blog" className="navbar-mobile-link" onClick={() => setIsOpen(false)}>Blog</Link>
-                    <Link href="#faq" className="navbar-mobile-link" onClick={() => setIsOpen(false)}>FAQ&apos;s</Link>
+                    {navLinks.map((link) => (
+                        <Link
+                            key={link.name}
+                            href={link.href}
+                            className="navbar-mobile-link"
+                            onClick={() => setIsOpen(false)}
+                        >
+                            {link.name}
+                        </Link>
+                    ))}
 
                     <Button variant="primary" size="lg" className="w-full" onClick={() => {
                         setIsOpen(false);
-                        window.open('#tickets', '_self');
+                        window.location.href = '/#tickets';
                     }}>
                         Buy Tickets
                     </Button>

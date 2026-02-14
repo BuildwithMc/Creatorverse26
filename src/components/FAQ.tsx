@@ -55,6 +55,13 @@ export default function FAQ() {
                         </div>
                     ))}
                 </div>
+
+                {/* Learn More Button */}
+                <div className="faq-button-wrapper">
+                    <button className="faq-learn-more-button" onClick={() => window.location.href = '/faq'}>
+                        Learn More
+                    </button>
+                </div>
             </div>
         </section>
     );

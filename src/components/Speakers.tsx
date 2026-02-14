@@ -48,6 +48,13 @@ export default function Speakers() {
                         <div className="speakers-coming-soon-text">COMING SOON...</div>
                     </div>
                 </div>
+
+                {/* View All Speakers Button */}
+                <div className="speakers-button-wrapper">
+                    <button className="speakers-view-all-button" onClick={() => window.location.href = '/speakers'}>
+                        View All Of Our Speakers
+                    </button>
+                </div>
             </div>
         </section>
     );

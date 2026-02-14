@@ -12,19 +12,19 @@ export default function Footer() {
                 <div className="footer-top-section">
                     <div className="footer-links-grid">
                         <div className="footer-link-column">
-                            <a href="#schedule">Schedule</a>
-                            <a href="#speakers">Speakers</a>
-                            <a href="#tickets">Tickets</a>
+                            <a href="/schedule">Schedule</a>
+                            <a href="/speakers">Speakers</a>
+                            <a href="/#tickets">Tickets</a>
                         </div>
                         <div className="footer-link-column">
-                            <a href="#faqs">FAQs</a>
-                            <a href="#blogs">Blogs</a>
+                            <a href="/faq">FAQs</a>
+                            <a href="/blog">Blogs</a>
                             <a href="#dp">DP Generator</a>
                         </div>
                     </div>
 
                     <div className="footer-cta-wrapper">
-                        <button className="footer-buy-tickets-btn">Buy Tickets</button>
+                        <button className="footer-buy-tickets-btn" onClick={() => window.location.href = '/#tickets'}>Buy Tickets</button>
                     </div>
                 </div>
 

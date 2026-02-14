@@ -338,7 +338,7 @@
     font-weight: 800;
     color: white;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05rem;
     text-align: center;
     line-height: 1.2;
     padding: 0 1rem;
@@ -387,12 +387,21 @@
 
     .speakers-container {
         flex-direction: row;
-        border-radius: 30px;
+        border-radius: 0;
         min-height: 550px;
+        gap: 8px;
     }
 
     .speakers-slot {
         min-height: auto;
+        border-radius: 30px;
+    }
+
+    .speakers-slot:nth-child(1),
+    .speakers-slot:nth-child(2),
+    .speakers-slot:nth-child(3),
+    .speakers-slot:nth-child(4) {
+        border-radius: 30px;
     }
 
     .speakers-silhouette-wrapper {
@@ -442,8 +451,20 @@
     }
 
     .speakers-container {
-        border-radius: 40px;
+        border-radius: 0;
         min-height: 700px;
+        gap: 10px;
+    }
+
+    .speakers-slot {
+        border-radius: 40px;
+    }
+
+    .speakers-slot:nth-child(1),
+    .speakers-slot:nth-child(2),
+    .speakers-slot:nth-child(3),
+    .speakers-slot:nth-child(4) {
+        border-radius: 40px;
     }
 
     .speakers-silhouette-wrapper {
@@ -478,6 +499,40 @@
         letter-spacing: 0.2em;
     }
 }
+
+/* Speakers View All Button */
+.speakers-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.speakers-view-all-button {
+    background: linear-gradient(135deg, #FE49C1 0%, #FF69D4 100%);
+    color: white;
+    font-family: var(--font-plus-jakarta);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(254, 73, 193, 0.3);
+}
+
+.speakers-view-all-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(254, 73, 193, 0.4);
+}
+
+@media (min-width: 768px) {
+    .speakers-view-all-button {
+        font-size: 16px;
+        padding: 1.125rem 3rem;
+    }
+}
+
 
 /* ========================================
    HERO SECTION
@@ -2593,5 +2648,71 @@ img {
 
     p {
         margin-bottom: 0.75rem;
+    }
+}
+
+
+/* ========================================
+   NAVIGATION BUTTONS FOR HOME PAGE SECTIONS
+   ======================================== */
+
+/* Schedule Full Program Button */
+.schedule-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.schedule-full-program-button {
+    background: linear-gradient(135deg, #FE49C1 0%, #FF69D4 100%);
+    color: white;
+    font-family: var(--font-plus-jakarta);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(254, 73, 193, 0.3);
+}
+
+.schedule-full-program-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(254, 73, 193, 0.4);
+}
+
+/* FAQ Learn More Button */
+.faq-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.faq-learn-more-button {
+    background: linear-gradient(135deg, #FE49C1 0%, #FF69D4 100%);
+    color: white;
+    font-family: var(--font-plus-jakarta);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(254, 73, 193, 0.3);
+}
+
+.faq-learn-more-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(254, 73, 193, 0.4);
+}
+
+@media (min-width: 768px) {
+
+    .schedule-full-program-button,
+    .faq-learn-more-button {
+        font-size: 16px;
+        padding: 1.125rem 3rem;
     }
 }
